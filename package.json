@@ -1,0 +1,20 @@
+{
+  "name": "frontend-extensibility-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "npm run clean && serve --cors dist & ./node_modules/typescript/bin/tsc --watch",
+    "build": "npm run clean && ./node_modules/typescript/bin/tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@futureordering/fo-web-plugin-types": "^1.1.1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "typescript": "^5.3.2"
+  }
+}
