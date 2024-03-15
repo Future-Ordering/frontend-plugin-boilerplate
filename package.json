@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist",
-    "dev": "npm run clean && serve --cors dist & ./node_modules/typescript/bin/tsc --watch",
-    "build": "npm run clean && ./node_modules/typescript/bin/tsc"
+    "clean": "shx rm -rf dist",
+    "dev": "npm run clean && serve --cors dist & node ./node_modules/typescript/bin/tsc --watch",
+    "build": "npm run clean && node ./node_modules/typescript/bin/tsc"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "serve": "^14.2.1",
+    "shx": "^0.3.4",
     "typescript": "^5.3.2"
   }
 }
