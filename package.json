@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "shx rm -rf dist",
-    "dev": "npm run clean && serve --cors dist & node ./node_modules/typescript/bin/tsc --watch",
-    "build": "npm run clean && node ./node_modules/typescript/bin/tsc"
+    "dev": "npm run clean && serve --cors dist & npm run build -- --watch",
+    "build": "node build.mjs"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "@futureordering/fo-web-plugin-types": "^1.1.1"
   },
   "devDependencies": {
+    "esbuild": "^0.20.2",
     "serve": "^14.2.1",
     "shx": "^0.3.4",
     "typescript": "^5.3.2"

@@ -1,4 +1,4 @@
-import { MyPluginContext } from "../../types";
+import { MyPluginContext } from '../types';
 
 export default (context: MyPluginContext) => {
     context.uiPluginLoader.registerTransformPlugin({

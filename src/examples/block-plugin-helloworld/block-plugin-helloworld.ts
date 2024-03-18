@@ -1,4 +1,4 @@
-import { MyPluginContext } from '../../types';
+import { MyPluginContext } from '../types';
 
 export default async (context: MyPluginContext) => {
     context.uiPluginLoader.registerBlockPlugin({

@@ -1,0 +1,18 @@
+{
+    "version": "1.0.0",
+    "description": "Prints hello world",
+    "parameters": [
+        {
+            "name": "env",
+            "friendlyName": "Future Ordering Environment",
+            "description": "The environment to target in future ordering. Use dev or test for testing. Prod for production. Default is prod.",
+            "required": false,
+            "schema": {
+                "type": "string",
+                "items": {
+                    "enum": ["dev", "test", "prod"]
+                }
+            }
+        }
+    ]
+}
