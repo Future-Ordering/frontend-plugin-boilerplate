@@ -15,11 +15,11 @@ const buildArgs = {
     outfile: `dist/${pluginName}/${pluginName}-${manifest.version}.js`,
 };
 
-// build plugins
-await esbuild.build(buildArgs);
-
-// watch mode
 if (process.argv.includes('--watch')) {
+    // watch mode
     const ctx = await esbuild.context(buildArgs);
     await ctx.watch();
+} else {
+    // build plugins
+    await esbuild.build(buildArgs);
 }

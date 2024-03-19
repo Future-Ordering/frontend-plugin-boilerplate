@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "shx rm -rf dist",
-    "dev": "npm run clean && serve --cors dist & npm run build -- --watch",
-    "dev-https": "npm run clean && serve --cors --ssl-cert localhost.pem --ssl-key localhost-key.pem dist & npm run build -- --watch",
+    "dev": "npm run clean && npm run build && serve --cors dist & npm run build -- --watch",
+    "dev-https": "npm run clean && npm run build && serve --cors --ssl-cert localhost.pem --ssl-key localhost-key.pem dist & npm run build -- --watch",
     "build": "node build.mjs"
   },
   "author": "",
