@@ -1,10 +1,10 @@
 import { MyPluginContext } from '../types';
 
 export default (context: MyPluginContext) => {
-    context.uiPluginLoader.registerPagePlugin({
+    context.componentLoader.registerPageComponent({
         path: 'hello-world',
-        loadContent: async pagePluginContext => {
-            const { page } = pagePluginContext;
+        loadContent: async ctx => {
+            const { page } = ctx;
 
             page.setTitle('Welcome to the Hello world page');
 

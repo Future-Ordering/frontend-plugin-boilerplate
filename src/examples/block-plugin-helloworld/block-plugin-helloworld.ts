@@ -1,10 +1,10 @@
 import { MyPluginContext } from '../types';
 
 export default async (context: MyPluginContext) => {
-    context.uiPluginLoader.registerBlockPlugin({
+    context.componentLoader.registerBlockComponent({
         location: 'start-bottom',
-        loadContent: async blockPluginContext => {
-            const { shadow } = blockPluginContext;
+        loadContent: async ctx => {
+            const { shadow } = ctx;
 
             const container = document.createElement('div');
             container.innerText = 'Hello world';
