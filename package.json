@@ -1,13 +1,13 @@
 {
   "name": "frontend-extensibility-example",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "shx rm -rf dist",
-    "dev": "npm run clean && npm run build && serve --cors dist & npm run build -- --watch",
-    "dev-https": "npm run clean && npm run build && serve --cors --ssl-cert localhost.pem --ssl-key localhost-key.pem dist & npm run build -- --watch",
-    "build": "node build.mjs"
+    "dev": "npm run clean && node build.mjs && serve --cors dist & node build.mjs --watch",
+    "dev-https": "npm run clean && node build.mjs && serve --cors --ssl-cert localhost.pem --ssl-key localhost-key.pem dist & node build.mjs --watch",
+    "build": "npm run clean && node build.mjs --include-manifest"
   },
   "author": "",
   "license": "ISC",

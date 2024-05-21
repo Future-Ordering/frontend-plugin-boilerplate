@@ -1,7 +1,7 @@
 
 
 import * as esbuild from 'esbuild';
-import { readFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 
 // name of plugin
 const pluginName = 'myplugin';
@@ -12,7 +12,7 @@ const buildArgs = {
     entryPoints: [`src/myplugin/${pluginName}.ts`],
     bundle: true,
     format: 'esm',
-    outfile: `dist/${pluginName}/${pluginName}-${manifest.version}.js`,
+    outfile: `dist/${pluginName}/${manifest.version}/${pluginName}.js`,
 };
 
 if (process.argv.includes('--watch')) {
@@ -22,4 +22,8 @@ if (process.argv.includes('--watch')) {
 } else {
     // build plugins
     await esbuild.build(buildArgs);
+}
+
+if (process.argv.includes('--include-manifest')) {
+    await writeFile(`dist/${pluginName}/${manifest.version}/manifest.json`, JSON.stringify(manifest, null, 2));
 }

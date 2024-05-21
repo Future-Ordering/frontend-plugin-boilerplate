@@ -14,6 +14,8 @@
 
 6. See examples directory for examples
 
+7. **npm run build**, to build once and include manifest.json in dist.
+
 ## Serve plugins over HTTPS
 
 Some browser doesn't allow serving files from http. To enable HTTPS:
