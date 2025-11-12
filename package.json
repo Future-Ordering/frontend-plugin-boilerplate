@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@futureordering/fo-web-plugin-types": "^2.0.0"
+    "@futureordering/fo-web-plugin-types": "^3.5.0"
   },
   "devDependencies": {
     "esbuild": "^0.20.2",

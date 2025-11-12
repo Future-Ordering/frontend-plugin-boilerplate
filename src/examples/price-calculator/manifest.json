@@ -1,0 +1,5 @@
+{
+    "version": "1.0.0",
+    "description": "A price calculator plugin",
+    "esm": true
+}

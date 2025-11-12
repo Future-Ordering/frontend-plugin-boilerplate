@@ -1,5 +1,6 @@
 {
     "version": "1.0.0",
     "description": "Hello world old browser plugin example",
+    "esm": false,
     "parameters": []
 }

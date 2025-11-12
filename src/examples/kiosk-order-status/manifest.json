@@ -1,0 +1,6 @@
+{
+    "version": "1.0.0",
+    "description": "Replaces kiosk order status with hello world message",
+    "esm": true,
+    "parameters": []
+}
