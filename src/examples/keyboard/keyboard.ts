@@ -15,6 +15,7 @@ export default async (context: Context) => {
             name: 'checkout', // page will be injected in checkout flow
             index: 0,
         },
+        shouldBeLoaded: async ctx => ctx.kiosk.isKiosk(),
         loadContent: async ctx => {
             const { shadow, dialog } = ctx;
 
@@ -61,6 +62,15 @@ export default async (context: Context) => {
                 keyboardContainer.style.left = `${namePosition.left - (keyboardWidth - namePosition.width) / 2}px`;
                 keyboardContainer.style.top = namePosition.bottom + 45 + 'px';
                 keyboardContainer.style.width = keyboardWidth + 'px';
+            });
+
+            context.page.setButton({
+                type: 'next-button',
+                visible: true,
+                enabled: true,
+                onClick: async () => {
+                    // Save guest name here
+                },
             });
         },
         disconnectedCallback() {
